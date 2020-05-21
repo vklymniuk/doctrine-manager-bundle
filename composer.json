@@ -1,0 +1,42 @@
+{
+  "name": "vklymniuk/doctrine-manager-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony bundle for doctrine entity management usage adapting.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladimir Klymniuk",
+      "email": "v.klymniuk@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "doctrine/doctrine-bundle": "^2.0",
+    "sensio/framework-extra-bundle": "^5.0",
+    "vklymniuk/doctrine-specification":"dev-master",
+    "doctrine/orm": "^2.7",
+    "symfony/dependency-injection": "^5.0",
+    "symfony/config": "^5.0",
+    "symfony/property-access": "^5.0",
+    "symfony/http-kernel": "^5.0",
+    "ramsey/uuid-doctrine": "^1.6"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "config": {
+    "secure-http": false
+  },
+  "suggest": {
+  },
+  "autoload":     {
+    "psr-4": { "VK\\DoctrineManagerBundle\\": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": { "Tests\\": "tests/" }
+  },
+  "minimum-stability": "stable",
+  "scripts": {
+    "test": "phpunit"
+  }
+}

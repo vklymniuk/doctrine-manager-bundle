@@ -1,0 +1,21 @@
+parameters:
+  api_pagination_limit: "%env(APP__PAGINATION_LIMIT)%"
+
+services:
+  base.paginate.adapter_factory:
+      class: VK\DoctrineManagerBundle\Paginate\Adapter\AdapterFactory
+      arguments: ["base.paginate.adapter_"]
+      calls:
+         - [setContainer, ["@service_container"]]
+
+  base.paginate.adapter_doctrine:
+      class: VK\DoctrineManagerBundle\Paginate\Adapter\DoctrineAdapter
+
+  base.paginate.adapter_elastic:
+      class: VK\DoctrineManagerBundle\Paginate\Adapter\ElasticAdapter
+
+  base.paginate.adapter_doctrine_timebased:
+      class: VK\DoctrineManagerBundle\Paginate\Adapter\DoctrineTimeBasedAdapter
+
+  base.paginate.adapter_elastic_timebased:
+      class: VK\DoctrineManagerBundle\Paginate\Adapter\ElasticTimeBasedAdapter

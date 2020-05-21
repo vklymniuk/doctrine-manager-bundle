@@ -1,0 +1,4 @@
+imports:
+    - { resource: services/manager.yaml }
+    - { resource: services/param_converter.yaml }
+    - { resource: services/paginator.yaml }
